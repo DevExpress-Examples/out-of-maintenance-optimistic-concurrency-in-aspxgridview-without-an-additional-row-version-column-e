@@ -58,7 +58,7 @@ public partial class _Default : System.Web.UI.Page {
             return ms.ToArray();
         }
     }
-    protected void grid_CustomJSProperties(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewClientJSPropertiesEventArgs e) {
+    protected void grid_CustomJSProperties(object sender, DevExpress.Web.ASPxGridViewClientJSPropertiesEventArgs e) {
         for (int i = 0; i < grid.VisibleRowCount; i++)
             RowHashes[grid.GetRowValues(i, grid.KeyFieldName)] = GetRowHash(grid.GetRowValues(i, grid.KeyFieldName));
     }

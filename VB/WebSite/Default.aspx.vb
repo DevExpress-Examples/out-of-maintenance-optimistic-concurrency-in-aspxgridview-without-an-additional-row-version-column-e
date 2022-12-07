@@ -66,7 +66,7 @@ Partial Public Class _Default
 			Return ms.ToArray()
 		End Using
 	End Function
-	Protected Sub grid_CustomJSProperties(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewClientJSPropertiesEventArgs)
+	Protected Sub grid_CustomJSProperties(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewClientJSPropertiesEventArgs)
 		For i As Integer = 0 To grid.VisibleRowCount - 1
 			RowHashes(grid.GetRowValues(i, grid.KeyFieldName)) = GetRowHash(grid.GetRowValues(i, grid.KeyFieldName))
 		Next i
